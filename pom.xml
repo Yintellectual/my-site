@@ -9,7 +9,17 @@
 	<url>http://maven.apache.org</url>
 
 
+
 	<dependencies>
+
+		<!--Tiles -->
+
+		<dependency>
+			<groupId>org.apache.tiles</groupId>
+			<artifactId>tiles-extras</artifactId>
+			<version>3.0.5</version>
+		</dependency>
+
 
 		<!-- Servlet -->
 
@@ -38,6 +48,12 @@
 
 
 	</dependencies>
+	<!-- 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+	 -->
 	<build>
 		<finalName>Saloon</finalName>
 		<plugins>
