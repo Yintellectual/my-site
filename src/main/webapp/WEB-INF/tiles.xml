@@ -6,7 +6,7 @@
 
 <tiles-definitions>
 	
-
+<!-- 
 	<definition name="DefaultTemplate" template="/WEB-INF/views/template/SiteTemplate.jsp">
 		<put-attribute name="title" value="Home" />
 		<put-attribute name="header" value="/WEB-INF/views/template/header.jsp" />
@@ -14,20 +14,67 @@
 		<put-attribute name="body" value="" />
 		<put-attribute name="footer" value="/WEB-INF/views/template/footer.jsp" />
 	</definition>
-
-	<definition name="NoChange" template="/WEB-INF/views/template/NoChange.jsp">
-		<put-attribute name="cssfilecommon" value=""/>
+ -->
+ 
+	<definition name="SiteTemplate" template="/WEB-INF/views/template/SiteTemplate.jsp">
+		<put-attribute name="title" value="东方水木" />
+		<put-attribute name="cssfilecommon" value="/WEB-INF/css/w3css.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/template/header.jsp" />
+		<put-attribute name="topnav" value="/WEB-INF/views/template/topnav.jsp" />
 		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/template/footer.jsp" />
 	</definition>
 
-	<definition name="index" extends="NoChange">
-		 <put-attribute name="cssfilecommon" value="/WEB-INF/css/w3css.jsp" />
-		<put-attribute name="body" value="/index.jsp" />
+	<definition name="index" extends="SiteTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/bodies/index.jsp" />
 	</definition>
 
-	<definition name="welcome" extends="DefaultTemplate">
-		<put-attribute name="body" value="/welcome.jsp" />
+	<definition name="css3" extends="SiteTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/bodies/css3.jsp" />
 	</definition>
 
+	<definition name="eclipse" extends="SiteTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/bodies/eclipse.jsp" />
+	</definition>
+
+	<definition name="github" extends="SiteTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/bodies/github.jsp" />
+	</definition>
+
+	<definition name="html5" extends="SiteTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/bodies/html5.jsp" />
+	</definition>
+
+	<definition name="java" extends="SiteTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/bodies/java.jsp" />
+	</definition>
+
+	<definition name="jsp" extends="SiteTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/bodies/jsp.jsp" />
+	</definition>
+
+	<definition name="maven" extends="SiteTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/bodies/maven.jsp" />
+	</definition>
+
+	<definition name="spring" extends="SiteTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/bodies/spring.jsp" />
+	</definition>
+
+	<definition name="thymeleaf" extends="SiteTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/bodies/thymeleaf.jsp" />
+	</definition>
+
+	<definition name="ubuntu" extends="SiteTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/bodies/ubuntu.jsp" />
+	</definition>
+
+	<definition name="tomcat" extends="SiteTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/bodies/tomcat.jsp" />
+	</definition>
+
+	<definition name="tiles-spring" extends="SiteTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/bodies/tiles-spring.jsp" />
+	</definition>
 
 </tiles-definitions>
