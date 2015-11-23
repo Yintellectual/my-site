@@ -76,5 +76,28 @@
 	<definition name="tiles-spring" extends="SiteTemplate">
 		<put-attribute name="body" value="/WEB-INF/views/bodies/tiles-spring.jsp" />
 	</definition>
+	
+	<definition name="upload" extends="SiteTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/bodies/upload.jsp" />
+	</definition>
+	
+	<definition name="confirmUpload" extends="SiteTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/bodies/confirmUpload.jsp" />
+	</definition>
+	
+	<definition name="success" extends="SiteTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/bodies/success.jsp" />
+	</definition>
+
+	<definition name="/upload/form/technology" extends="SiteTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/bodies/upload/form/technology.jsp" />
+	</definition>
+	<definition name="/upload/confirm/technology" extends="SiteTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/bodies/upload/confirm/technology.jsp" />
+	</definition>
+	<definition name="/upload/success/technology" extends="SiteTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/bodies/upload/success/technology.jsp" />
+	</definition>
+
 
 </tiles-definitions>

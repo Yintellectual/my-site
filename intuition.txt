@@ -14,3 +14,11 @@ In this very first version, the view technology will be pure HTML5+CSS3, no mode
 visit http://localhost:8080/Saloon/welcome
 visit http://localhost:8080/Saloon/index
 visit http://localhost:8080/Saloon/(default index.jsp page)
+
+Version 0.0.2-SNAPSHOT - 10:59pm November 21 2015
+
+This is the revised reversion with Hibernate integration. 
+
+In this version, contents of the website will be stored in the database according to which the pages will be generated dynamically though JSP/JSTL.
+
+visit http://localhost:port/Saloon
