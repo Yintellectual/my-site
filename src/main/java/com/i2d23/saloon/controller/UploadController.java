@@ -13,8 +13,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.i2d23.saloon.dao.BeanDaoImp;
-import com.i2d23.saloon.dao.PostDaoImp;
 import com.i2d23.saloon.dao.TechnologyDaoImp;
 import com.i2d23.saloon.beans.Technology;
 import com.i2d23.saloon.dao.ArticleDaoImp;
@@ -36,7 +34,7 @@ public class UploadController implements ApplicationContextAware{
 		model.addAttribute("user",getPrincipal());
 		return "/upload/confirm/technology";
 	}
-	@RequestMapping(value = "/success/technology", method = RequestMethod.POST)
+	@RequestMapping(value = "/success/technology")
 	public String successTechnology(HttpSession session, Model model) {
 		model.addAttribute("user",getPrincipal());
 		Technology technology = (Technology) session.getAttribute("technology");
