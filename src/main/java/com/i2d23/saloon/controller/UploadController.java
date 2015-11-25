@@ -6,6 +6,8 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,15 +27,18 @@ public class UploadController implements ApplicationContextAware{
 	private ApplicationContext appContext;
 
 	@RequestMapping("/form/technology")
-	public String formTechnology() {
+	public String formTechnology(Model model) {
+		model.addAttribute("user",getPrincipal());
 		return "/upload/form/technology";
 	}
 	@RequestMapping(value = "/confirm/technology", method = RequestMethod.POST)
-	public String confirmTechnology() {
+	public String confirmTechnology(Model model) {
+		model.addAttribute("user",getPrincipal());
 		return "/upload/confirm/technology";
 	}
 	@RequestMapping(value = "/success/technology", method = RequestMethod.POST)
-	public String successTechnology(HttpSession session) {
+	public String successTechnology(HttpSession session, Model model) {
+		model.addAttribute("user",getPrincipal());
 		Technology technology = (Technology) session.getAttribute("technology");
 		TechnologyDaoImp technologyDaoImp = (TechnologyDaoImp) appContext.getBean("technologyDaoImp");
 		technologyDaoImp.save(technology);
@@ -41,25 +46,41 @@ public class UploadController implements ApplicationContextAware{
 	}
 	
 	@RequestMapping("/form/article")
-	public String formArticle() {
+	public String formArticle(Model model) {
+		model.addAttribute("user",getPrincipal());
 		return "/upload/form/article";
 	}
 	@RequestMapping(value = "/confirm/article", method = RequestMethod.POST)
-	public String confirmArticle() {
+	public String confirmArticle(Model model) {
+		model.addAttribute("user",getPrincipal());
 		return "/upload/confirm/article";
 	}
 	@RequestMapping(value = "/success/article", method = RequestMethod.POST)
-	public String successArticle(HttpSession session) {
+	public String successArticle(HttpSession session, Model model) {
+		model.addAttribute("user",getPrincipal());
 		Article article = (Article) session.getAttribute("article");
 		ArticleDaoImp articleDaoImp = (ArticleDaoImp) appContext.getBean("articleDaoImp");
-		articleDaoImp.save(article);
+		articleDaoImp.save(article); 
 		return "/upload/success/article";
 	}
+	
+	
 	@Override
 	public void setApplicationContext(ApplicationContext arg0) throws BeansException {
 		// TODO Auto-generated method stub
 		appContext = arg0;
 		
 	}
+    private String getPrincipal(){
+        String userName = null;
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+ 
+        if (principal instanceof UserDetails) {
+            userName = ((UserDetails)principal).getUsername();
+        } else {
+            userName = principal.toString();
+        }
+        return userName;
+    }
 	
 }

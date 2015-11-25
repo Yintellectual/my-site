@@ -14,6 +14,7 @@ public class TechnologyDaoImp implements TechnologyDao{
 	public void setSessionFactory(SessionFactory sessionFactory){		
 		this.sessionFactory=sessionFactory;
 	}
+
 	@Override
 	public void save(Technology technology){
 		Session session = this.sessionFactory.openSession();
@@ -24,8 +25,9 @@ public class TechnologyDaoImp implements TechnologyDao{
 	}
 	@Override
 	public List<Technology> list(){
+		assert(!(sessionFactory==null));
 		Session session = this.sessionFactory.openSession();
-		List<Technology> postList = session.createQuery("from technology" ).list();
+		List<Technology> postList = session.createQuery("from Technology" ).list();
 		session.close();
 		return postList;
 	}

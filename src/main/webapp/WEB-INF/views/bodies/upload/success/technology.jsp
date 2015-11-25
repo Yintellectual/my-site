@@ -3,5 +3,5 @@
 		li{display:block}
 	</style>
 	<jsp:useBean id="technology" class="com.i2d23.saloon.beans.Technology" scope="session"/>
-	<li><%=technology.getName() %></li>
+	<li><%=technology.toString() %></li>
 </ul>

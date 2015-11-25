@@ -1,10 +1,21 @@
 package com.i2d23.saloon.beans;
 
-public class Article {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.FetchType;
+@Entity 
+public class Article{
+	@Id
 	private int id;
 	private String title;
 	private String content;
+	@ManyToOne(fetch=FetchType.EAGER)
+	@JoinColumn(name="technology_id")
 	private Technology technology;
+	
+	
 	public int getId() {
 		return id;
 	}

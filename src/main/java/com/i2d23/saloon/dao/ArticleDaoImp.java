@@ -26,7 +26,7 @@ public class ArticleDaoImp implements ArticleDao{
 	@Override
 	public List<Article> list(){
 		Session session = this.sessionFactory.openSession();
-		List<Article> postList = session.createQuery("from article").list();
+		List<Article> postList = session.createQuery("from Article").list();
 		session.close();
 		return postList;
 	}

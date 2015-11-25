@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.i2d23.saloon.dao.PostDaoImp;
 import com.i2d23.saloon.beans.Post;
-@Controller
+//@Controller
 public class FormController implements ApplicationContextAware{
 	  
 	  private ApplicationContext appContext;

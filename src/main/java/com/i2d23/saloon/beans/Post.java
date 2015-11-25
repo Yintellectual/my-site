@@ -1,5 +1,8 @@
 package com.i2d23.saloon.beans;
 
+import org.hibernate.annotations.DynamicUpdate;
+
+@DynamicUpdate 
 public class Post {
 	
 	private int id;

@@ -4,7 +4,7 @@
 	</style>
 		 <section class="w3-container">
 			<div class="w3-container w3-margin-32 w3-orange">
-				<a href="<%=request.getContextPath()%>/tiles-spring"><h2>JSP &#38; Tiles</h2></a>
+				<a href="<%=request.getContextPath()%>/article/tiles-spring"><h2>JSP &#38; Tiles</h2></a>
 
 				<p>
 					The power of Tiles comes from its composite design pattern. Here is
@@ -15,7 +15,7 @@
 			</div>
 
 			<div class="w3-container w3-margin-32 w3-orange">
-				<a href="<%=request.getContextPath()%>/css3"><h2>HTML5 &#38; CSS3</h2></a>
+				<a href="<%=request.getContextPath()%>/article/css3"><h2>HTML5 &#38; CSS3</h2></a>
 
 				<p>
 					Tutorials and References can be found in <a href="www.w3school.com">w3school.com</a>.
@@ -29,7 +29,7 @@
 
 
 			<div class="w3-container w3-margin-32 w3-orange">
-				<a href="<%=request.getContextPath()%>/spring"><h2>
+				<a href="<%=request.getContextPath()%>/article/spring"><h2>
 					Spring <abbr title="Model View Controller">MVC</abbr> Framework
 				</h2></a>
 
@@ -48,7 +48,7 @@
 
 
 			<div class="w3-container w3-margin-32 w3-orange">
-				<a href="<%=request.getContextPath()%>/github"><h2>GitHub</h2></a>
+				<a href="<%=request.getContextPath()%>/article/github"><h2>GitHub</h2></a>
 
 				<p>Although I just use github as online backup repository, I can
 					feel its power inside.</p>
@@ -56,7 +56,7 @@
 			</div>
 
 			<div class="w3-container w3-margin-32 w3-orange">
-				<a href="<%=request.getContextPath()%>/maven"><h2>Maven</h2></a>
+				<a href="<%=request.getContextPath()%>/article/maven"><h2>Maven</h2></a>
 
 				<p>Maven is so useful that I almost have it to do everything
 					from managing dependency, compiling, packaging to running the
@@ -67,7 +67,7 @@
 
 
 			<div class="w3-container w3-margin-32 w3-orange">
-				<a href="<%=request.getContextPath()%>/ubuntu"><h2>Server Administration</h2></a>
+				<a href="<%=request.getContextPath()%>/article/ubuntu"><h2>Server Administration</h2></a>
 
 				<p>I have no choice but to learn something about server
 					administration, but unix/linux is cool.</p>
