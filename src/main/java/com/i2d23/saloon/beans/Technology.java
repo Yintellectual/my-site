@@ -1,6 +1,7 @@
 package com.i2d23.saloon.beans;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -58,6 +59,15 @@ public class Technology {
 	public void setArticles(List<Article> articles){
 		this.articles = articles;
 	} 
+	public void removeArticle(Article article){
+		
+		Iterator i = articles.iterator();
+		while(i.hasNext()){
+			if(((Article)i.next()).getId()==article.getId()){
+				i.remove();
+			}
+		}
+	}
 	public void addArticle(Article article){
 		if(!articles.contains(article)){
 			articles.add(article);

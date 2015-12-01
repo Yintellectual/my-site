@@ -19,7 +19,7 @@ public class ArticleDaoImp implements ArticleDao{
 	public void save(Article article){
 		Session session = this.sessionFactory.openSession();
 		Transaction tx = session.beginTransaction();
-		session.persist(article);
+		session.saveOrUpdate(article);
 		tx.commit();
 		session.close();
 	}

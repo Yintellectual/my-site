@@ -62,6 +62,11 @@ public class UploadController implements ApplicationContextAware{
 		return "/upload/success/article";
 	}
 	
+	@RequestMapping(value = "/confirm/changeTechnology", method = RequestMethod.POST)
+	public String confirmChangeTechnology(Model model) {
+		model.addAttribute("user",getPrincipal());
+		return "/upload/confirm/changeTechnology";
+	}
 	
 	@Override
 	public void setApplicationContext(ApplicationContext arg0) throws BeansException {
