@@ -1,9 +1,0 @@
-com\i2d23\saloon\controller\UploadController.class
-com\i2d23\saloon\controller\DisplayController.class
-com\i2d23\saloon\beans\Article.class
-com\i2d23\saloon\beans\Technology.class
-com\i2d23\saloon\dao\TechnologyDaoImp.class
-com\i2d23\saloon\dao\ArticleDao.class
-com\i2d23\saloon\dao\ArticleDaoImp.class
-com\i2d23\saloon\dao\TechnologyDao.class
-com\i2d23\saloon\beans\Technology$Image.class
